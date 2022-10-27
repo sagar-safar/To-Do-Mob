@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>CSS Project</title>
+</head>
+
+<style>
+    .task-card{
+        background-color: white;
+        position: absolute;
+        top: 40%;
+        left: 35%;
+        height: 180px;
+        width: 380px;
+        border-radius: 10px;
+        border-top-left-radius: 10px;
+    }
+
+    .task-card > h2{
+        background-color: white;
+        font-size: large;
+        display: inline-block;
+        padding: 10px;
+        border-radius: 10px;
+
+    }
+   .task-card >a> i{
+    background-color: white;
+        color: black;
+        font-size: 15px;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        cursor: pointer;
+
+        
+   }
+
+    .task-card > button{
+        border-radius: 10px;
+    position: relative;
+    border: none;
+    float: right;
+    padding: 10px;
+    right: 20px;
+    background-color: #00A5EC;
+    cursor: pointer;
+    color: white;
+}
+.task-card > input{
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+    width: 80%;
+    margin: 20px 40px;
+}
+
+                                                    /* Media Queries */
+
+@media (min-width:0px)and (max-width:480px){
+
+    .task-card{
+        top: 40%;
+        left: 17%;
+        height: 160px;
+        width: 300px;
+    }
+
+    .task-card > button{ 
+        top: 15px;
+    padding: 8px;
+  
+}
+
+.task-card > input{
+    
+    padding: 5px;
+    width: 80%  ;
+    margin: 10px 30px;
+}
+
+
+    }
+
+
+    @media (min-width:481px)and (max-width:768px){
+
+.task-card{
+    top: 40%;
+    left: 25%;
+    height: 170px;
+    width: 330px;
+}
+
+.task-card > button{ 
+    
+padding: 10px;
+top: 10px;
+
+}
+
+.task-card > input{
+
+padding: 8px;
+width: 80%;
+margin: 10px 30px;
+}
+
+
+}
+
+
+
+    
+</style>
+<body>
+
+    <div style="filter:brightness(20%) ; position: relative; opacity: 0.6;  ">
+        <header>
+            <nav>
+                <h1>Tasks <span style="color:#00A5EC;">List</span></h1>
+            </nav>
+        </header>
+    
+        <main>
+                <figure class="plus-icon-fig">
+                    <i class="fa-solid plus-icon fa-circle-plus"><span>Add New Task</span></i>
+                </figure>
+            
+                <section class="grid-section">
+                    <section class="cards">
+                        <div class="card">
+                            <h2><a href="index3.html">Trip To Paris</a></h2>
+                            <hr>
+                            <div class="checkbox">
+                                <i class="fa-solid done-cheeckbox fa-square-check"><s>Visit Church</s></i> <br><br>
+                                <input type="checkbox">
+                                <span>Shopping</span>
+                            </div>
+                        </div>
+    
+    
+                        <div class="card">
+                            <h2>My To Do List</h2>
+                            <hr>
+                            <div class="checkbox">
+                                <i class="fa-solid done-cheeckbox fa-square-check"><s>Visit Supermarket</s></i> <br><br>
+                                <input type="checkbox">
+                                <span>Buy Vegetables</span>
+                            </div>
+                        </div>
+    
+    
+    
+                        <div class="card">
+                            <h2>Movies I will Watch</h2>
+                            <hr>
+                            <div class="checkbox">
+                                <i class="fa-solid done-cheeckbox fa-square-check"><s>Stranger Things 4</s></i> <br><br>
+                                <input type="checkbox">
+                                <span>Avenger Endgame</span>
+                            </div>
+                        </div>
+    
+    
+    
+                        <div class="card">
+                            <h2>Daily Morning Routine For...</h2>
+                            <hr>
+                            <div class="checkbox">
+                                <i class="fa-solid done-cheeckbox fa-square-check"><s>Wake up at 6am</s></i> <br> <br>
+                                <input type="checkbox">
+                                <span>Sleep at 10pm</span>
+                            </div>
+                        </div>
+    
+    
+                        <div class="card">
+                            <h2>Books To Read</h2>
+                            <i class="fa-sharp fa-solid fa-xmark-large"></i>
+                            <hr>
+                            <div class="checkbox">
+                                <i class="fa-solid done-cheeckbox fa-square-check"><s>Design of Everyday</s></i> <br><br>
+                                <input type="checkbox">
+                                <span>Alchemist</span>
+                            </div>
+                        </div>
+            
+                    </section>
+    
+                </section>
+
+
+          
+            
+        </main>
+
+    </div>
+    <div class="task-card">
+        <h2>Add New Task</h2>
+        <a href="index.html"><i  class="fa-sharp fa-solid fa-xmark-large">╳</i></a>
+        <hr>
+        <input type="text" placeholder="Learn C++"> <br>    
+        <button> + Add New Task</button>
+    </div>
+</body>
+</html>

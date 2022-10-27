@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Card</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: rgb(227, 227, 227);
+    }
+
+    nav {
+      height: 80px;
+      box-shadow: 0px 3px 30px #7b7b7b29;
+      background-color: white;
+    }
+
+    nav>h1 {
+      display: inline-block;
+      margin-top: 1.6rem;
+      margin-left: 5rem;
+    }
+
+    .card {
+      height: 15rem;
+      width: 25rem;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      background-color: white;
+      border-radius: 10px;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    figure {
+      margin-top: 2rem;
+      display: flex;
+      gap: 10rem;
+    }
+
+    figure>i {
+      font-size: 35px;
+    }
+
+    figure>i>a {
+      text-decoration: none;
+    }
+
+
+    figure>i>a>span {
+      position: relative;
+      bottom: 8px;
+      left: 1rem;
+      font-size: 1rem;
+      color: black;
+    }
+
+    .plus-icon {
+      color: #00a5ec;
+      width: 11rem;
+    }
+
+    .plus-icon>span {
+      color: black;
+      font-size: 15px;
+      position: relative;
+      bottom: 7px;
+      left: 5px;
+    }
+
+    .card-section {
+      height: 80vh;
+    }
+
+    .card>h2 {
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .main-card {
+      width: fit-content;
+      font-size: 1rem;
+      color: black;
+      padding: 20px;
+    }
+
+    .checkbox-icon {
+      color: gray;
+      margin-right: 2rem;
+    }
+
+    s {
+      color: rgb(169, 169, 169);
+      padding-right: 3rem;
+    }
+
+    input {
+      margin-top: 1rem;
+      margin-right: 2rem;
+    }
+
+
+    .task-card {
+      background-color: white;
+      position: absolute;
+      top: 25%;
+      left: 38%;
+      height: 180px;
+      width: 380px;
+      border-radius: 10px;
+    }
+
+    .task-card>h2 {
+      background-color: white;
+      font-size: large;
+      display: inline-block;
+      padding: 10px;
+
+    }
+
+    .task-card>a>i {
+      background-color: white;
+      color: black;
+      font-size: 15px;
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      cursor: pointer;
+
+
+    }
+
+    .task-card>button {
+      border-radius: 10px;
+      position: relative;
+      border: none;
+      float: right;
+      padding: 10px;
+      right: 20px;
+      background-color: #00A5EC;
+      cursor: pointer;
+      color: white;
+    }
+
+    .task-card>input {
+      border-radius: 5px;
+      background-color: rgb(230, 230, 230);
+      border: none;
+      padding: 5px;
+      width: 80%;
+      margin: 20px 40px;
+    }
+
+
+    /* Media Queries */
+    @media (min-width:0px)and (max-width:480px) {
+      .task-card {
+        top: 25%;
+        left: 10%;
+        height: 180px;
+        width: 300px;
+      }
+
+      .task-card>button {
+
+        padding: 5px;
+        right: 20px;
+
+      }
+    }
+
+
+    
+    @media (min-width:481px)and (max-width:748px) {
+
+      .task-card {
+        top: 35%;
+        left: 17%;
+        height: 200px;
+        width: 400px;
+      }
+
+      .task-card>button {
+
+        padding: 10px;
+        right: 20px;
+
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <!-- NavBar -->
+
+
+  <div style="filter:brightness(30%) ; opacity: 0.2;">
+    <header>
+      <nav>
+        <h1>Tasks <span style="color: #00a5ec">List</span></h1>
+      </nav>
+    </header>
+
+
+    <!-- single Card -->
+    <section class="container">
+      <figure>
+        <i class="fa-sharp fa-solid fa-circle-arrow-left"><a href="index.html"><span>back</span></a></i>
+        <i class="fa-solid plus-icon fa-circle-plus"><span>Add New Task</span></i>
+      </figure>
+
+      <section class="card-section">
+        <div class="card">
+          <h2>Trip To Paris</h2>
+          <hr>
+          <div class="main-card">
+            <i class="fa-solid checkbox-icon fa-square-check"></i><s>Visit Church </s> <br>
+            <input type="checkbox">
+            <label>Shopping</label>
+          </div>
+      </section>
+    </section>
+  </div>
+
+
+
+
+  <div class="task-card">
+    <h2>Add New Task</h2>
+    <a href="index3.html"><i class="fa-sharp fa-solid fa-xmark-large">╳</i></a>
+    <hr>
+    <input type="text" placeholder="Visit Famous Places"> <br>
+    <button> + Add New Task</button>
+
+  </div>
+
+
+
+</body>
+
+</html>
